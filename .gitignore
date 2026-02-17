@@ -12,6 +12,7 @@ error.log
 # Env/secrets
 .env
 .env.*
+includes/db.local.php
 
 # Local tooling
 .vscode/

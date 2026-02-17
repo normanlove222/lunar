@@ -6,17 +6,7 @@ Template Name: Lunar
 <?php get_header(); ?>
 <?php
 
-$host = 'lunar-ingress.norman-love.com';
-$db = "lunar";
-$user = 'lunar222';
-$pass = 'Norman144$';
-$charset = 'utf8mb4';
-
-// $host = 'localhost';
-// $db = "lunar-ingress";
-// $user = 'root';
-// $pass = '';
-// $charset = 'utf8mb4';
+$config = require __DIR__ . '/includes/db_config.php';
 
 $options = [
     PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
@@ -24,7 +14,12 @@ $options = [
     PDO::ATTR_EMULATE_PREPARES   => false,
     PDO::MYSQL_ATTR_INIT_COMMAND => "SET time_zone = '+00:00'",
 ];
-$pdo = new PDO("mysql:host=$host;dbname=$db;charset=$charset", $user, $pass, $options);
+$pdo = new PDO(
+    "mysql:host={$config['host']};dbname={$config['db']};charset={$config['charset']}",
+    $config['user'],
+    $config['pass'],
+    $options
+);
 
 
 //sql for future lunar ingresses
