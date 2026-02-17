@@ -1,0 +1,18 @@
+# OS/editor
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+
+# Logs/runtime
+*.log
+error_log
+error.log
+
+# Env/secrets
+.env
+.env.*
+
+# Local tooling
+.vscode/
+.idea/
