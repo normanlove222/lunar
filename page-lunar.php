@@ -113,7 +113,7 @@ list($localDate, $localTime) = convertToLocalTime($current['idate'], $current['t
            
             <th >Date Moon Enters</th>           
             <th >Sign</th>
-            <th >Time(GMT)</th>
+            <th>Time (Pacific Time)</th>
             
           </tr>
         </thead>

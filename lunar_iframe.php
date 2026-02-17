@@ -6,17 +6,16 @@ global $pdo;
 
 
 $stmt = $pdo->query("SELECT * FROM lunar
-                    WHERE idate BETWEEN CURRENT_DATE()
-                    AND DATE_ADD(CURRENT_DATE(), INTERVAL 30 DAY) 
-                    order by idate asc");
+                    WHERE idate >= UTC_TIMESTAMP()
+                    AND idate < DATE_ADD(UTC_TIMESTAMP(), INTERVAL 30 DAY)
+                    ORDER BY idate ASC");
 $info = $stmt->fetchall();
 
 //lets get current sign info
-$stmt2 = $pdo->query("SELECT * FROM `lunar`
-                    where current_date() between date_sub(idate, interval 1 day) 
-                    and date_add(idate, interval 1 day) 
-                    order by idate ASC
-                    limit 1");
+$stmt2 = $pdo->query("SELECT * FROM lunar
+                    WHERE idate <= UTC_TIMESTAMP()
+                    ORDER BY idate DESC
+                    LIMIT 1");
 $current = $stmt2->fetch();
 
 ?>
@@ -76,7 +75,7 @@ $latest_year = intval(date('Y'));
           <tr>
             <th>Date</th>
             <th>Sign Entered</th>
-            <th>Time(GMT)</th>
+            <th>Time (Pacific Time)</th>
           </tr>
         </thead>
         <tbody>
