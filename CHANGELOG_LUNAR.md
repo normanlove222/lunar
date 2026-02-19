@@ -1,6 +1,11 @@
 # Lunar Change Log
 
-Track styling and feature work done on non-main branches before merge.
+Track key project changes.
+
+## Deployment
+- Added server-side DreamHost deploy repo at `~/repos/lunar.git` with `post-receive` hook deploying to `~/norman-love.com/lunar`.
+- Configured local `origin` push URLs to push both GitHub and DreamHost deploy remote in one `git push origin main`.
+- Disabled fragile local `post-push` hook dependency (`core.hooksPath` unset).
 
 ## css-updates
 - Branch created for local styling improvements to `/lunar/`.
