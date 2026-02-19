@@ -43,12 +43,16 @@ list($localDate, $localTime) = convertToLocalTime($current['idate'], $current['t
     <img class="hero-image" src="images/moon-signs-ingress.jpg" alt="Moon and zodiac signs">
     
     <h1 class="title">Lunar Ingress</h1>
-    <h2 class="subtitle">When the beloved Moon (Luna) enters a specific sign</h2>
-    <h1 class="current">The Moon (Luna) is currently in: <span><?php echo htmlspecialchars($current['sign'], ENT_QUOTES, 'UTF-8'); ?></span></h1>
-    <h1 class="current">Entered on: <?php echo htmlspecialchars($localDate, ENT_QUOTES, 'UTF-8'); ?> at <?php echo htmlspecialchars($localTime, ENT_QUOTES, 'UTF-8'); ?></h1>
+    <h2 class="subtitle">Shows which zodiac sign the Moon (Luna) is currently in</h2>
+    <h1 class="current">Luna is currently in: <span><?php echo htmlspecialchars($current['sign'], ENT_QUOTES, 'UTF-8'); ?></span></h1>
+    <h2 class="entered">Entered on: <?php echo htmlspecialchars($localDate, ENT_QUOTES, 'UTF-8'); ?> at <?php echo htmlspecialchars($localTime, ENT_QUOTES, 'UTF-8'); ?></h2>
 
     <div class="opening">
-         The moon takes 28 days to cycle all zodiac. Luna spends approx. 2.5 days in each of the 12 Zodic signs. During the time when the moon is in your birth Sun sign, there is an alchemical reaction, process, and opportunity which can occur in the body, when we fast, cleanse and purify the body and consciousness during this period. The Amygdala of the brain produces this golden oil which will produce a few drops each month. These oils will eventually pool in the area of the solar plexus and then move on to other parts of the body. Overtime these oils act as the catalyst for advanced Ascension processes of the body. 
+        <p>The Moon completes its journey through all 12 zodiac signs in approximately 28 days, spending about 2.5 days in each sign.</p>
+        
+        <p>When the Moon enters your birth Sun sign, a unique opportunity arises. During this time, fasting and cleansing practices can trigger a special alchemical process within the body.</p>
+        
+        <p>The Amygdala gland in the brain produces a sacred oil, releasing a few drops each month. This oil gradually accumulates in the solar plexus region before distributing throughout the body. Over time, this oil serves as a catalyst for spiritual transformation and bodily ascension.</p>
     </div>   
 
 <p class="current-sign">Luna is currently in: <span><?php echo htmlspecialchars($current['sign'], ENT_QUOTES, 'UTF-8'); ?></span></p>
@@ -58,8 +62,8 @@ list($localDate, $localTime) = convertToLocalTime($current['idate'], $current['t
           <thead>
             <tr>
               <th>Date</th>
-              <th>Sign Entered</th>
-              <th>Time (Pacific Time)</th>
+              <th>Sign Enters</th>
+              <th>Time (PST)</th>
             </tr>
           </thead>
           <tbody>
