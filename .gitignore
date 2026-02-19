@@ -17,3 +17,4 @@ includes/db.local.php
 # Local tooling
 .vscode/
 .idea/
+*.code-workspace
